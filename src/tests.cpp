@@ -111,7 +111,6 @@ void test_insertionSort_empty_and_single(void)
     TEST_ASSERT_TRUE_MESSAGE(list.length()==0, "length is not 0");
 
     list.addShape(new Circle(1));
-    
     list.insertionSort();
     TEST_ASSERT_TRUE_MESSAGE(list.length()==1, "length is not 0");
     TEST_ASSERT_TRUE_MESSAGE(list.nameAt(0)=="Circle", "nameAt is not circle");
