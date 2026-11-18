@@ -92,9 +92,10 @@ void test_list_add_null_guard(void)
 void test_insertionSort_orders_by_area(void)
 {
     ShapeList list;
-    list.addShape(new Rectangle(2,5));
+    
     list.addShape(new Circle(1));
     list.addShape(new Square(2));
+    list.addShape(new Rectangle(2,5));
     list.insertionSort();
     TEST_ASSERT_TRUE_MESSAGE(list.nameAt(0)=="Circle", "not circle");
     TEST_ASSERT_TRUE_MESSAGE(list.nameAt(1)=="Square", "not square");

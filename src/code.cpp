@@ -170,12 +170,13 @@ void ShapeList::insertionSort()
     auto key = std::next(data.begin());
     while (key != data.end()){
         auto keyAfter = std::next(key);
+        Shape* keyShape = *key;
 
         auto position = key;
         while (position != data.begin()){
             auto previous = std::prev(position);
 
-            if (!(**position < **previous)){ //iterator->shape ptr, shape ptr->shape
+            if (!(*keyShape < **previous)){ //iterator->shape ptr, shape ptr->shape
                 break;
             }
             position = previous;
